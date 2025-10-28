@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Empleado;
 
+/**
+     * creando controler
+     */
 class EmpleadoController extends Controller
 {
     /**
