@@ -2,58 +2,33 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Empleado; // ✅ Importa el modelo
 use Illuminate\Http\Request;
-use App\Models\Empleado;
 
-/**
-     * creando controler
-     */
 class EmpleadoController extends Controller
 {
-    /**
-     * Mostrar todos los empleados.
-     */
     public function index()
     {
-        $empleados = Empleado::all();
+        // ⚠️ Aumenta el tiempo de ejecución solo para esta función
+        set_time_limit(300); // 5 minutos
+
+        $empleados = Empleado::all(); // ✅ Usa el modelo
+
         return response()->json($empleados);
     }
 
-    /**
-     * Registrar un nuevo empleado.
-     */
     public function store(Request $request)
     {
-        $empleado = Empleado::create($request->all());
+        set_time_limit(300);
+
+        $empleado = Empleado::create([
+            'nombre' => $request->nombre,
+            'apellido' => $request->apellido,
+            'correo' => $request->correo,
+            'salario' => $request->salario,
+            'empleado_id' => $request->empleado_id
+        ]);
+
         return response()->json($empleado, 201);
-    }
-
-    /**
-     * Mostrar un empleado específico.
-     */
-    public function show(string $id)
-    {
-        $empleado = Empleado::findOrFail($id);
-        return response()->json($empleado);
-    }
-
-    /**
-     * Actualizar un empleado existente.
-     */
-    public function update(Request $request, string $id)
-    {
-        $empleado = Empleado::findOrFail($id);
-        $empleado->update($request->all());
-        return response()->json($empleado);
-    }
-
-    /**
-     * Eliminar un empleado.
-     */
-    public function destroy(string $id)
-    {
-        $empleado = Empleado::findOrFail($id);
-        $empleado->delete();
-        return response()->json(['message' => 'Empleado eliminado correctamente']);
     }
 }

@@ -9,8 +9,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
-<!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -52,52 +51,40 @@
         </header>
         <div class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
             <main class="flex max-w-[335px] w-full flex-col-reverse lg:max-w-4xl lg:flex-row">
-                <div class="flex-1 p-6 pb-12 lg:p-20 bg-white dark:bg-[#161615] dark:text-[#EDEDEC] shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] rounded-bl-lg rounded-br-lg lg:rounded-tl-lg lg:rounded-br-none">
-                    <!-- Nombre -->
-                    <h1 class="mb-2 text-2xl lg:text-3xl font-bold text-[#4f46e5] dark:text-[#FFD700] tracking-wide">
-                        MARIAN CELESTE GIRONDA CHURA
-                    </h1>
-
-                    <!-- Universidad -->
-                    <p class="mb-4 text-lg lg:text-xl text-[#706f6c] dark:text-[#A1A09A] font-semibold">
-                        UNIVERSIDAD ADVENTISTA DE BOLIVIA
-                    </p>
-
-                    <!-- Lista de detalles con iconos de Bootstrap -->
-                    <ul class="flex flex-col gap-3 mb-6 lg:mb-8 text-base lg:text-lg text-[#4a4a4a] dark:text-[#ccc]">
-                        <li class="d-flex align-items-center">
-                            <i class="bi bi-mortarboard-fill me-2 text-primary"></i>
-                            Carrera: Ingeniería de Sistemas
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="bi bi-geo-alt-fill text-[#4f46e5] dark:text-[#FFD700]"></i>
-                            Ciudad: La Paz, Bolivia
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="bi bi-envelope-fill text-[#4f46e5] dark:text-[#FFD700]"></i>
-                            Email: marian@example.com
-                        </li>
+                <div class="text-[13px] leading-[20px] flex-1 p-6 pb-12 lg:p-20 bg-white dark:bg-[#161615] dark:text-[#EDEDEC] shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] rounded-bl-lg rounded-br-lg lg:rounded-tl-lg lg:rounded-br-none">
+                    <h1 class="mb-1 font-medium"></h1>
+                    <p class="mb-2 text-[#706f6c] dark:text-[#A1A09A]">DELIA MAMANI SAUCEDO 
+                        <br>TECNOLOGIAS DE INTERNET
+                        <br>deliamamani031@gmail.com</p>
+                    <ul class="flex flex-col mb-4 lg:mb-6">
+                        <!--<li class="flex items-center gap-4 py-2 relative before:border-l before:border-[#e3e3e0] dark:before:border-[#3E3E3A] before:top-1/2 before:bottom-0 before:left-[0.4rem] before:absolute">
+                            <span class="relative py-1 bg-white dark:bg-[#161615]">
+                                <span class="flex items-center justify-center rounded-full bg-[#FDFDFC] dark:bg-[#161615] shadow-[0px_0px_1px_0px_rgba(0,0,0,0.03),0px_1px_2px_0px_rgba(0,0,0,0.06)] w-3.5 h-3.5 border dark:border-[#3E3E3A] border-[#e3e3e0]">
+                                    <span class="rounded-full bg-[#dbdbd7] dark:bg-[#3E3E3A] w-1.5 h-1.5"></span>
+                                </span>
+                            </span>
+                            <span>-->
+                                
+                                <a href="https://laravel.com/docs" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#f53003] dark:text-[#FF4433] ml-1">
+                                    <span>UNIVERSIDAD ADVENTISTA DE BOLIVIA</span>
+                                   
                     </ul>
-
+                    <ul class="flex gap-3 text-sm leading-normal">
+                        
+                    </ul>
                 </div>
-
                 <div class="bg-[#fff2f2] dark:bg-[#1D0002] relative lg:-ml-px -mb-px lg:mb-0 rounded-t-lg lg:rounded-t-none lg:rounded-r-lg aspect-[335/376] lg:aspect-auto w-full lg:w-[438px] shrink-0 overflow-hidden">
-                    <img 
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqpiIIfHjG6D68kU9szsqfg-DHlHUPh6D01Q&s" 
-                        alt="Foto de perfil"
-                        class="w-full h-full object-cover object-center"
-                    >
-                    <div class="absolute inset-0 rounded-t-lg lg:rounded-t-none lg:rounded-r-lg shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d]"></div>
-                </div>
+                    <!-- {{-- Laravel Logo --}}
 
+                    <div class="absolute inset-0 rounded-t-lg lg:rounded-t-none lg:rounded-r-lg shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d]"></div> -->
+                    <img src="{{ asset('gatito.jpg') }}" alt="Gatito" class="w-full h-auto rounded-t-lg lg:rounded-t-none lg:rounded-r-lg shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d]" />
+
+                </div>
             </main>
         </div>
 
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
         @endif
-
-        <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

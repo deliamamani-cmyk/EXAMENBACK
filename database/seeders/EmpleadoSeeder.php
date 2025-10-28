@@ -18,25 +18,24 @@ class EmpleadoSeeder extends Seeder
      * creando 3 ejemplos de seeder
      */
         Empleado::create([
-            'nombre' => 'Juan',
+            'nombre' => 'Juana',
             'apellido' => 'Pérez',
             'correo' => 'juan.perez@example.com',
             'salario' => 3500.00
         ]);
 
         Empleado::create([
-            'nombre' => 'María',
+            'nombre' => 'Miriam',
             'apellido' => 'Gonzales',
-            'correo' => 'maria.gonzales@example.com',
+            'correo' => 'miriam.gonzales@example.com',
             'salario' => 4200.50
         ]);
 
         Empleado::create([
             'nombre' => 'Carlos',
-            'apellido' => 'López',
-            'correo' => 'carlos.lopez@example.com',
+            'apellido' => 'Quispe',
+            'correo' => 'carlos.quispe@example.com',
             'salario' => 2800.75
         ]);
     }
 }
-
