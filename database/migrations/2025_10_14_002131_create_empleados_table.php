@@ -7,9 +7,6 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
-     */
-    /**
      * CREACION DE LA TABLA EMPLEADOS
      */
     public function up(): void

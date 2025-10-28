@@ -14,6 +14,9 @@ class EmpleadoSeeder extends Seeder
      */
     public function run(): void
     {
+        /**
+     * creando 3 ejemplos de seeder
+     */
         Empleado::create([
             'nombre' => 'Juan',
             'apellido' => 'Pérez',
