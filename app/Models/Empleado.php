@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Empleado extends Model
 {
    
-    // Nombre correcto de la tabla
+    //Creando el modelo empleado
     protected $table = "empleados";
 
     // Campos que se pueden llenar masivamente
